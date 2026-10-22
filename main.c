@@ -7,7 +7,17 @@ void nhapDaySo(int a[], int n);
 void xuatDaySo(int a[], int n);
 
 // Hàm sắp xếp dãy số tăng dần (Sử dụng thuật toán Interchange Sort)
-void sapXepTangDan(int a[], int n);
+void sapXepTangDan(int a[], int n){
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (a[i] > a[j]) {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+}
 
 // Hàm đếm số phần tử chẵn
 int demSoChan(int a[], int n) {
